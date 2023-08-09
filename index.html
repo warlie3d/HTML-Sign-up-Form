@@ -16,9 +16,17 @@
              <!-- TODO: Set Action and Method Properties -->
             <div>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <span class="required-field">*</span>
+                <input  type="text" id="firstname" name="firstname" required minlength="2" maxlength="35">
                 <label for="lastname"> Your Last name</label>
-                <input type="text" id="lastname" name="lastname">
+                <span class="required-field">*</span>
+                <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="35">
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age" min="21" max="120">
+                <label for="password">Your Secret Code (must be 6 alphanumeric characters)<span></span></label>
+                <input type="password" id="password" name="password" pattern="[0-9a-zA-Z]{6}" title="6-Character Alphanumberic Pass code" required>
+                <H5>One Must Be Aged 21 Or Older To Enter The Contest</H5>
+
                 <!-- TODO: Create a "lastname" input with type "text" -->
             </div>
             <fieldset>
@@ -87,7 +95,7 @@
                         <option value="WY">Wyoming</option>
                     </select>
                     <label for="zip">Your Zipcode</label>
-                    <input type="number" id="zip" name="zip">
+                    <input type="number" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US zip code">
                 </div>
             </fieldset>
 
@@ -149,3 +157,4 @@
     </footer>
 </body>
 </html>
+
